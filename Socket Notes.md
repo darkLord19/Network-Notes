@@ -150,7 +150,16 @@ it's up to you to send the rest of the string.
 ```c
 int recv(int sockfd, void *buf, int len, int flags)
 ```
-
+function shall receive a message from a connection-mode or connectionless-mode socket
+```
+sockfd is the socket descriptor to read from, 
+buf is the buffer to read the information into, 
+len is the maximum length of the buffer, 
+and flags can again be set to 0.
+```
+recv() returns the number of bytes actually read into the buffer, or -1 on error (with errno set, accordingly.) 
+recv() can return 0. This can mean only one thing: the remote side has closed the connection on you! 
+A return value of 0 is recv()'s way of letting you know this has occurred.
 
 
 # Extra
