@@ -1,7 +1,3 @@
-# U's FTP
-
-
-
 ### Two types of sockets.
 1) Stream Sockets(SOCK_STREAM) - uses TCP internally
 2) Datagram Sockets(SOCK_DGRAM) - Connectionless, uses UDP internally
